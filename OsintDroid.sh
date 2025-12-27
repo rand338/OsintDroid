@@ -129,7 +129,6 @@ option_9() {
         codes=$(adb shell pm dump "${pkg}" \
             | grep -E 'Scheme: "android_secret_code"|Authority: "[0-9].*"|Authority: "[A-Z].*"' || true)
 
-        # Prüfen ob Variable nicht leer ist (nur dann Ausgabe)
         # if var is not empty, print it
         if [[ -n "$codes" ]]; then
             
